@@ -1,0 +1,184 @@
+/* =====================================
+   BODY & BASE
+   ===================================== */
+body {
+    background-color: #000;               /* Pure black background */
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =====================================
+   MAIN HEADING / HEADER
+   ===================================== */
+h1 {
+    background-image: url('Black_hole_representation.gif'); /* GIF behind text */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px;
+    margin: 20px auto;
+    width: 90%;
+    color: #f3f3f3;
+    text-align: center;
+    background-color: #000;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 3rem;
+    animation: fadeScale 3s ease-in-out infinite alternate; /* Subtle scale + fade */
+}
+
+/* =====================================
+   Subtle Fade & Scale Animation
+   ===================================== */
+@keyframes fadeScale {
+    0% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+    50% {
+        transform: scale(1.03);
+        opacity: 0.95;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+}
+
+/* =====================================
+   HEADER SUBTITLE
+   ===================================== */
+header p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #ccc;
+    opacity: 0.9;
+}
+
+/* =====================================
+   SECTION HEADINGS (H2)
+   ===================================== */
+h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* =====================================
+   PARAGRAPHS
+   ===================================== */
+p {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    max-width: 800px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1rem;
+    border-left: 3px solid #555;       /* Subtle vertical line */
+    box-shadow: 0 0 5px #222 inset;    /* Soft inner shadow */
+    transition: all 0.3s ease;
+}
+
+p:hover {
+    border-left-color: #888;
+    box-shadow: 0 0 10px #444 inset;
+}
+
+/* =====================================
+   LISTS (Skills, Languages)
+   ===================================== */
+ul {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-left: 2px solid #555;
+    transition: border-left 0.3s ease, color 0.3s ease;
+}
+
+li:hover {
+    border-left-color: #888;
+    color: #ccc;
+}
+
+/* =====================================
+   LINKS
+   ===================================== */
+a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* =====================================
+   SECTION CONTAINERS
+   ===================================== */
+section {
+    padding: 20px 10px 40px 10px;
+    margin: 0 auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 30, 0.6); /* Slightly transparent dark box */
+    box-shadow: 0 0 10px #222;              /* Soft outer glow */
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 0 20px #444;              /* Slight hover highlight */
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+@media screen and (max-width: 768px) {
+    h1 { font-size: 2.2rem; padding: 100px 10px; }
+    h2 { font-size: 1.5rem; }
+    p, ul { font-size: 0.95rem; }
+}
+
+@media screen and (max-width: 480px) {
+    h1 { font-size: 1.8rem; padding: 80px 10px; }
+    h2 { font-size: 1.3rem; }
+    p, ul { font-size: 0.9rem; }
+}
+
+/* =====================================
+   Fade-in on scroll (JS controlled)
+   ===================================== */
+section, h2, p, ul, li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible, h2.visible, p.visible, ul.visible, li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
